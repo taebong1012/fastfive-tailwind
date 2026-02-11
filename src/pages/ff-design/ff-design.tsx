@@ -1,7 +1,7 @@
-export default function FfDesign() {
+export const FfDesign = () => {
     return (
         <div>
             <h1>ff-design</h1>
         </div>
     );
-}
+};

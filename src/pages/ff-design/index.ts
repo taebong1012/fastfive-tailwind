@@ -1,1 +1,1 @@
-export { default as FfDesign } from './ff-design';
+export { FfDesign } from './ff-design';
