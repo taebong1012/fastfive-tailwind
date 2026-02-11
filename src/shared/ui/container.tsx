@@ -1,12 +1,14 @@
 import type { ReactNode } from 'react';
-import { cva, type VariantProps } from 'class-variance-authority';
+
+import { type VariantProps, cva } from 'class-variance-authority';
+
 import { cn } from '@/shared/lib/helper';
 
 const containerVariants = cva('mx-auto w-full', {
     variants: {
         variant: {
             default: '',
-            navigation: 'h-[72px] max-w-[1920px] px-12 flex items-center',
+            navigation: 'max-w-[1920px] px-12 flex items-center h-full',
         },
     },
     defaultVariants: {
@@ -14,10 +16,10 @@ const containerVariants = cva('mx-auto w-full', {
     },
 });
 
-interface ContainerProps extends VariantProps<typeof containerVariants> {
+type ContainerProps = VariantProps<typeof containerVariants> & {
     children: ReactNode;
     className?: string;
-}
+};
 
 export const Container = ({ children, variant, className }: ContainerProps) => {
     return <div className={cn(containerVariants({ variant }), className)}>{children}</div>;
