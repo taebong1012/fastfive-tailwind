@@ -15,7 +15,7 @@ export const NavigationBar = () => {
     const [hoverTab, setHoverTab] = useState<keyof NavigationMenus | null>(null);
 
     return (
-        <nav className="relative h-[72px]" onMouseLeave={() => setHoverTab(null)}>
+        <nav className="relative h-[72px] bg-white" onMouseLeave={() => setHoverTab(null)}>
             <Container variant="navigation" className="border-b border-gray-200">
                 {/* 로고 */}
                 <a href="/">

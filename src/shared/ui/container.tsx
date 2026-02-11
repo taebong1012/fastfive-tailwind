@@ -9,6 +9,7 @@ const containerVariants = cva('mx-auto w-full', {
         variant: {
             default: '',
             navigation: 'max-w-[1920px] px-12 flex items-center h-full',
+            marketingSection: 'px-auto flex flex-col items-center py-20',
         },
     },
     defaultVariants: {

@@ -7,24 +7,14 @@ import { cn } from '@/shared/lib/helper';
 const typographyVariants = cva('', {
     variants: {
         variant: {
+            default: 'text-base font-normal leading-relaxed',
+            description: 'text-sm font-normal leading-normal',
             label: 'text-lg font-medium leading-loose',
             link: 'text-md font-medium leading-loose text-secondary hover:font-semibold hover:text-primary',
-
-            // 밑에는 gpt가 예시로 만들어 준 것
-            h1: 'text-4xl font-bold leading-tight',
-            h2: 'text-3xl font-bold leading-tight',
-            h3: 'text-2xl font-semibold leading-snug',
-            h4: 'text-xl font-semibold leading-snug',
-            subtitle1: 'text-lg font-medium leading-normal',
-            subtitle2: 'text-base font-medium leading-normal',
-            body1: 'text-base font-normal leading-relaxed',
-            body2: 'text-sm font-normal leading-relaxed',
-            caption: 'text-xs font-normal leading-normal',
-            overline: 'text-xs font-semibold uppercase tracking-wider leading-normal',
         },
     },
     defaultVariants: {
-        variant: 'body1',
+        variant: 'default',
     },
 });
 
@@ -49,7 +39,7 @@ type TypographyProps<T extends ElementType = 'p'> = VariantProps<typeof typograp
 
 export const Typography = <T extends ElementType = 'p'>({
     children,
-    variant = 'body1',
+    variant = 'default',
     as,
     className,
     ...rest

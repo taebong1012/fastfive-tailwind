@@ -1,3 +1,11 @@
+import { Fragment } from 'react/jsx-runtime';
+
+import { SixMonthFree } from '@/pages/home/ui/six-month-free';
+
 export const Home = () => {
-    return <div>Home</div>;
+    return (
+        <Fragment>
+            <SixMonthFree />
+        </Fragment>
+    );
 };
